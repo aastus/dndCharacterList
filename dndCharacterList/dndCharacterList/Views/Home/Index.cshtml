@@ -1,8 +1,36 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model dndCharacterList.Models.ProjectInfo
+
+@{
+    ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container mt-5">
+    <div class="text-center">
+        <h1 class="display-4">@ViewData["Title"]</h1>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <th scope="row">Name:</th>
+                        <td>@Model.Name</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Group:</th>
+                        <td>@Model.Group</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Theme of Course Work:</th>
+                        <td>@Model.Theme</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Description of Theme:</th>
+                        <td>@Model.ThemeDescription</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
