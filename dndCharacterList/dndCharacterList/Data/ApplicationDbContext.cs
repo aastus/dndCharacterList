@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using dndCharacterList.Models;
 
 namespace dndCharacterList.Data
 {
@@ -9,5 +10,6 @@ namespace dndCharacterList.Data
             : base(options)
         {
         }
+        public DbSet<dndCharacterList.Models.Skill>? Skill { get; set; }
     }
 }
