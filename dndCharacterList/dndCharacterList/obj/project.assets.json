@@ -2,6 +2,28 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "CoreAdmin/2.5.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.0",
+          "NonFactors.Grid.Core.Mvc6": "7.0.0"
+        },
+        "compile": {
+          "lib/net6.0/DotNetEd.CoreAdmin.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/DotNetEd.CoreAdmin.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ],
+        "build": {
+          "buildTransitive/CoreAdmin.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/CoreAdmin.props": {}
+        }
+      },
       "Humanizer.Core/2.8.26": {
         "type": "package",
         "compile": {
@@ -539,6 +561,18 @@
           }
         }
       },
+      "NonFactors.Grid.Core.Mvc6/7.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Mvc.Grid.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Mvc.Grid.Core.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "System.Collections.Immutable/6.0.0": {
         "type": "package",
         "dependencies": {
@@ -768,6 +802,57 @@
     }
   },
   "libraries": {
+    "CoreAdmin/2.5.1": {
+      "sha512": "1KwVKxwyEnJeXxIl+56sWfi22jgEGPvr27t5gFZKHfPjyte0jlNHFj3btN2VIwqxadlmynXtkdaAmg8fNXRpqQ==",
+      "type": "package",
+      "path": "coreadmin/2.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/CoreAdmin.props",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "buildMultiTargeting/CoreAdmin.props",
+        "buildTransitive/CoreAdmin.props",
+        "coreadmin.2.5.1.nupkg.sha512",
+        "coreadmin.nuspec",
+        "lib/net6.0/DotNetEd.CoreAdmin.dll",
+        "staticwebassets/css/bootstrap-dark.css",
+        "staticwebassets/css/bootstrap-dark.min.css",
+        "staticwebassets/css/bootstrap-grid.css",
+        "staticwebassets/css/bootstrap-grid.css.map",
+        "staticwebassets/css/bootstrap-grid.min.css",
+        "staticwebassets/css/bootstrap-grid.min.css.map",
+        "staticwebassets/css/bootstrap-reboot.css",
+        "staticwebassets/css/bootstrap-reboot.css.map",
+        "staticwebassets/css/bootstrap-reboot.min.css",
+        "staticwebassets/css/bootstrap-reboot.min.css.map",
+        "staticwebassets/css/bootstrap.css",
+        "staticwebassets/css/bootstrap.css.map",
+        "staticwebassets/css/bootstrap.min.css",
+        "staticwebassets/css/bootstrap.min.css.map",
+        "staticwebassets/css/easymde/easymde.css",
+        "staticwebassets/css/easymde/easymde.min.css",
+        "staticwebassets/css/jquery-ui.min.css",
+        "staticwebassets/css/mvc-grid/fonts/grid-glyphs.woff",
+        "staticwebassets/css/mvc-grid/mvc-grid-dark.css",
+        "staticwebassets/css/mvc-grid/mvc-grid.css",
+        "staticwebassets/css/site.css",
+        "staticwebassets/js/additional-methods.js",
+        "staticwebassets/js/additional-methods.min.js",
+        "staticwebassets/js/bootstrap.bundle.min.js",
+        "staticwebassets/js/bootstrap.min.js",
+        "staticwebassets/js/easymde/easymde.min.js",
+        "staticwebassets/js/jquery-ui.min.js",
+        "staticwebassets/js/jquery.js",
+        "staticwebassets/js/jquery.min.js",
+        "staticwebassets/js/jquery.min.map",
+        "staticwebassets/js/jquery.validate.js",
+        "staticwebassets/js/jquery.validate.unobtrusive.js",
+        "staticwebassets/js/jquery.validate.unobtrusive.min.js",
+        "staticwebassets/js/mvc-grid/mvc-grid.js",
+        "staticwebassets/js/site.js"
+      ]
+    },
     "Humanizer.Core/2.8.26": {
       "sha512": "OiKusGL20vby4uDEswj2IgkdchC1yQ6rwbIkZDVBPIR6al2b7n3pC91elBul9q33KaBgRKhbZH3+2Ur4fnWx2A==",
       "type": "package",
@@ -1770,6 +1855,18 @@
         "version.txt"
       ]
     },
+    "NonFactors.Grid.Core.Mvc6/7.0.0": {
+      "sha512": "yBJAt29MPQSGL67cmI8xNWUivJVKYVE4iOCgqd72jfufg+Ak9ut3NWXpBFtSErK5SMo+NhwzWlUgBQ38fDN0Gg==",
+      "type": "package",
+      "path": "nonfactors.grid.core.mvc6/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net6.0/Mvc.Grid.Core.dll",
+        "nonfactors.grid.core.mvc6.7.0.0.nupkg.sha512",
+        "nonfactors.grid.core.mvc6.nuspec"
+      ]
+    },
     "System.Collections.Immutable/6.0.0": {
       "sha512": "l4zZJ1WU2hqpQQHXz1rvC3etVZN+2DLmQMO79FhOTZHMn8tDRr+WU287sbomD0BETlmKDn0ygUgVy9k5xkkJdA==",
       "type": "package",
@@ -2257,6 +2354,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "CoreAdmin >= 2.5.1",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 6.0.3",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 6.0.3",
       "Microsoft.AspNetCore.Identity.UI >= 6.0.3",
@@ -2308,6 +2406,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "CoreAdmin": {
+            "target": "Package",
+            "version": "[2.5.1, )"
+          },
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
             "target": "Package",
             "version": "[6.0.3, )"

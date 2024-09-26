@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "1ygmeIgU0VzqXH2oOS4O/hsS7Kpy/Ek2oaULYN9YfX4nH8Ir32L5NM3pXK6ZuVVw+8BSEzcn19bnoXW2zQn4Aw==",
+  "dgSpecHash": "//lduMOknPpWO1W3/LQ1Kk4VgIcPUp6+W65XaQKqpf5a2tV77WWzWRpov9OjtE8WhRG0wke0kBW0mH1UKmVgLA==",
   "success": true,
   "projectFilePath": "D:\\я\\хну\\веб\\project\\dndCharacterList\\dndCharacterList\\dndCharacterList.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\asus\\.nuget\\packages\\coreadmin\\2.5.1\\coreadmin.2.5.1.nupkg.sha512",
     "C:\\Users\\asus\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\asus\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.3\\microsoft.aspnetcore.cryptography.internal.6.0.3.nupkg.sha512",
     "C:\\Users\\asus\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.3\\microsoft.aspnetcore.cryptography.keyderivation.6.0.3.nupkg.sha512",
@@ -42,6 +43,7 @@
     "C:\\Users\\asus\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\asus\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\asus\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\asus\\.nuget\\packages\\nonfactors.grid.core.mvc6\\7.0.0\\nonfactors.grid.core.mvc6.7.0.0.nupkg.sha512",
     "C:\\Users\\asus\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\asus\\.nuget\\packages\\system.configuration.configurationmanager\\4.7.0\\system.configuration.configurationmanager.4.7.0.nupkg.sha512",
     "C:\\Users\\asus\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",

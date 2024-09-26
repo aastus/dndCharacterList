@@ -14,6 +14,8 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddCoreAdmin();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -40,5 +42,7 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 app.MapRazorPages();
+
+app.UseCoreAdminCustomUrl("admin_panel");
 
 app.Run();

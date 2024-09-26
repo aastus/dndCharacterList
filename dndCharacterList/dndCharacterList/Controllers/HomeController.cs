@@ -20,12 +20,7 @@ namespace dndCharacterList.Controllers
                 "ІПЗс-24",
                 "Онлайн-ресурс конструктор для створення персонажа DnD",
                 "");
-            //{
-            //    Name = "Анастасія",
-            //    Group = "SE-2024",
-            //    
-            //    ThemeDescription = "This course work explores the importance of automated testing, its types, and implementation in large-scale software projects."
-            //};
+          
             return View(info);
         }
 
