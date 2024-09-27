@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("dndCharacterList")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2cfb39787b56a36995ec4c8619ba9cfadde73f2d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1814a0605c0551a3278d3c1961c55ee9bd9ec3da")]
 [assembly: System.Reflection.AssemblyProductAttribute("dndCharacterList")]
 [assembly: System.Reflection.AssemblyTitleAttribute("dndCharacterList")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

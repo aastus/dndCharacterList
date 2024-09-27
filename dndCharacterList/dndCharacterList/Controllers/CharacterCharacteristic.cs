@@ -8,13 +8,14 @@ using Microsoft.EntityFrameworkCore;
 using dndCharacterList.Data;
 using dndCharacterList.Models;
 
+
 namespace dndCharacterList.Controllers
 {
-    public class SkillsController : Controller
+    public class CharacterCharacteristic : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public SkillsController(ApplicationDbContext context)
+        public CharacterCharacteristic(ApplicationDbContext context)
         {
             _context = context;
         }

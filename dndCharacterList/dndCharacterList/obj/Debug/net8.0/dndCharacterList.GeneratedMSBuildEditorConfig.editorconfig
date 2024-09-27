@@ -30,6 +30,26 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/я/хну/веб/project/dndCharacterList/dndCharacterList/Views/CharacterCharacteristic/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhcmFjdGVyQ2hhcmFjdGVyaXN0aWNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/я/хну/веб/project/dndCharacterList/dndCharacterList/Views/CharacterCharacteristic/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhcmFjdGVyQ2hhcmFjdGVyaXN0aWNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/я/хну/веб/project/dndCharacterList/dndCharacterList/Views/CharacterCharacteristic/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhcmFjdGVyQ2hhcmFjdGVyaXN0aWNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/я/хну/веб/project/dndCharacterList/dndCharacterList/Views/CharacterCharacteristic/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhcmFjdGVyQ2hhcmFjdGVyaXN0aWNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/я/хну/веб/project/dndCharacterList/dndCharacterList/Views/CharacterCharacteristic/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhcmFjdGVyQ2hhcmFjdGVyaXN0aWNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/я/хну/веб/project/dndCharacterList/dndCharacterList/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -48,26 +68,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/я/хну/веб/project/dndCharacterList/dndCharacterList/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/я/хну/веб/project/dndCharacterList/dndCharacterList/Views/Skills/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2tpbGxzXENyZWF0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/я/хну/веб/project/dndCharacterList/dndCharacterList/Views/Skills/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2tpbGxzXERlbGV0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/я/хну/веб/project/dndCharacterList/dndCharacterList/Views/Skills/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2tpbGxzXERldGFpbHMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/я/хну/веб/project/dndCharacterList/dndCharacterList/Views/Skills/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2tpbGxzXEVkaXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/я/хну/веб/project/dndCharacterList/dndCharacterList/Views/Skills/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2tpbGxzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/я/хну/веб/project/dndCharacterList/dndCharacterList/Views/_ViewImports.cshtml]
