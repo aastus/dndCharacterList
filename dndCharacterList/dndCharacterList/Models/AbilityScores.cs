@@ -13,7 +13,6 @@ namespace dndCharacterList.Models
 
         public AbilityScores()
         {
-            // Initialize all scores to 10 by default
             Strength = 10;
             Dexterity = 10;
             Constitution = 10;
@@ -73,7 +72,7 @@ namespace dndCharacterList.Models
     public class Character
     {
         public string Name { get; set; }
-        public List<CharacterClassInfo> Classes { get; set; }
+        public CharacterClassInfo Classes { get; set; }
 
         public List<CharacterClassInfo> Languages { get; set; }  // Множина класів
         public RaceInfo Race { get; set; }
@@ -81,7 +80,7 @@ namespace dndCharacterList.Models
 
         public int Spead { get; set; }
 
-        public Character(string name, List<CharacterClassInfo> classes, RaceInfo race)
+        public Character(string name, CharacterClassInfo classes, RaceInfo race)
         {
             Name = name;
             Classes = classes;
@@ -93,20 +92,19 @@ namespace dndCharacterList.Models
         {
             Dictionary<string, int> totalBonuses = new Dictionary<string, int>();
 
-            foreach (var characterClass in Classes)
+            
+            foreach (var bonus in Classes.StatBonuses)
             {
-                foreach (var bonus in characterClass.StatBonuses)
+                if (totalBonuses.ContainsKey(bonus.Key))
                 {
-                    if (totalBonuses.ContainsKey(bonus.Key))
-                    {
-                        totalBonuses[bonus.Key] += bonus.Value;
-                    }
-                    else
-                    {
-                        totalBonuses[bonus.Key] = bonus.Value;
-                    }
+                    totalBonuses[bonus.Key] += bonus.Value;
+                }
+                else
+                {
+                    totalBonuses[bonus.Key] = bonus.Value;
                 }
             }
+           
 
             return totalBonuses;
         }
@@ -116,10 +114,9 @@ namespace dndCharacterList.Models
         {
             List<string> allAbilities = new List<string>();
 
-            foreach (var characterClass in Classes)
-            {
-                allAbilities.AddRange(characterClass.AvailableAbilities);
-            }
+  
+                allAbilities.AddRange(Classes.AvailableAbilities);
+         
 
             return allAbilities;
         }
@@ -128,10 +125,9 @@ namespace dndCharacterList.Models
         public int GetTotalLevel()
         {
             int totalLevel = 0;
-            foreach (var characterClass in Classes)
-            {
-                totalLevel += characterClass.Level;
-            }
+            
+                totalLevel += Classes.Level;
+            
             return totalLevel;
         }
     }

@@ -1,41 +1,59 @@
 ﻿@model IEnumerable<dndCharacterList.Models.Skill>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Skills";
 }
 
-<h1>Index</h1>
+<h2>Skills</h2>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+<!-- Форма пошуку і фільтрації -->
+<form asp-action="Index" method="get">
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-4">
+                <input type="text" name="searchString" value="@ViewData["CurrentFilter"]" class="form-control" placeholder="Search by name" />
+            </div>
+            <div class="col-md-2">
+                <input type="number" name="filterModifier" value="@ViewData["FilterModifier"]" class="form-control" placeholder="Filter by Modifier" />
+            </div>
+            <div class="col-md-2">
+                <input type="submit" value="Search" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-secondary">Reset</a>
+            </div>
+        </div>
+    </div>
+</form>
+
+<!-- Таблиця навичок -->
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Name)
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]">Name</a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Modifier)
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["ModifierSortParm"]">Modifier</a>
             </th>
-            <th></th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Modifier)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                <td>@Html.DisplayFor(modelItem => item.Modifier)</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
+
+<!-- Кнопка для створення нової навички -->
+<div>
+    <a asp-action="Create" class="btn btn-primary">Create New</a>
+</div>

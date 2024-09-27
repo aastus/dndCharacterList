@@ -21,12 +21,60 @@ namespace dndCharacterList.Controllers
         }
 
         // GET: Skills
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string sortOrder, string currentFilter, string searchString, string filterModifier)
         {
-              return _context.Skill != null ? 
-                          View(await _context.Skill.ToListAsync()) :
-                          Problem("Entity set 'ApplicationDbContext.Skill'  is null.");
+            ViewData["CurrentSort"] = sortOrder;
+            ViewData["NameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            ViewData["ModifierSortParm"] = sortOrder == "Modifier" ? "modifier_desc" : "Modifier";
+
+            if (searchString != null)
+            {
+                // Якщо користувач вводить новий пошуковий запит, скидаємо сторінку
+                ViewData["CurrentFilter"] = searchString;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
+
+            var skills = from s in _context.Skill
+                         select s;
+
+            // Фільтрація за пошуковим запитом
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                skills = skills.Where(s => s.Name.Contains(searchString));
+            }
+
+            // Фільтрація за модифікатором
+            if (!String.IsNullOrEmpty(filterModifier))
+            {
+                if (int.TryParse(filterModifier, out int modifierValue))
+                {
+                    skills = skills.Where(s => s.Modifier == modifierValue);
+                }
+            }
+
+            // Сортування
+            switch (sortOrder)
+            {
+                case "name_desc":
+                    skills = skills.OrderByDescending(s => s.Name);
+                    break;
+                case "Modifier":
+                    skills = skills.OrderBy(s => s.Modifier);
+                    break;
+                case "modifier_desc":
+                    skills = skills.OrderByDescending(s => s.Modifier);
+                    break;
+                default:
+                    skills = skills.OrderBy(s => s.Name);
+                    break;
+            }
+
+            return View(await skills.AsNoTracking().ToListAsync());
         }
+
 
         // GET: Skills/Details/5
         public async Task<IActionResult> Details(int? id)
